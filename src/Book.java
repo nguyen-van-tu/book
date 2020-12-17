@@ -9,7 +9,7 @@ public class Book {
     }
 
     public Book(int book, String name, float price, String author) {
-        this.bookID = book;
+        this.bookID = bookID;
         this.name = name;
         this.price = price;
         this.author = author;
