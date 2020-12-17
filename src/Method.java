@@ -49,10 +49,15 @@ public class Method {
         System.out.println("Tổng tiền là: " + tongtien + "VND");
 
     }
-    public void check(){
+//    hàm đếm số sach java
+    public int countBookJava() {
+        ArrayList<ProgrammingBook> programmingBookArrayList = new ArrayList<>();
         for (int i = 0; i < programmingBooks.length; i++) {
-            if (p.getLanguage().equals(i));
+            if (programmingBooks[i].getLanguage().equals("java")) {
+                programmingBookArrayList.add(programmingBooks[i]);
+            }
         }
+        return programmingBookArrayList.size();
 
     }
 

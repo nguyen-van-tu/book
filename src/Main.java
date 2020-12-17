@@ -7,7 +7,8 @@ public class Main {
             Scanner sc = new Scanner(System.in);
             System.out.println("1. Thêm");
             System.out.println("2. Tổng tiền");
-            System.out.println("3. Tìm kiếm");
+            System.out.println("3. Số sách ngôn ngữ java");
+            System.out.println("4. Tìm kiếm");
             System.out.println("Chọn : ");
             int choice = Integer.parseInt(sc.nextLine());
 
@@ -19,6 +20,9 @@ public class Main {
                     mt.tinhtien();
                     break;
                 case 3:
+                    System.out.println("Số sách ngôn ngữ java là: " + mt.countBookJava());
+                    break;
+                case 4:
                     System.out.println("Bạn muốn tìm giá sách nào ");
                     System.out.println("1. ProgrammingBook");
                     System.out.println("2. FictionBook");
