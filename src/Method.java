@@ -1,13 +1,8 @@
-import org.jcp.xml.dsig.internal.dom.DOMUtils;
-
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Method {
-    ProgrammingBook p= new ProgrammingBook();
     FictionBook[] fictionBooks = new FictionBook[5];
     ProgrammingBook[] programmingBooks = new ProgrammingBook[5];
-    Scanner sc = new Scanner(System.in);
 
     public void add() {
         ProgrammingBook java1 = new ProgrammingBook(1, "hoclaptrinh1", 10000, "tu1", "java", "SonMC1");
@@ -18,7 +13,7 @@ public class Method {
         programmingBooks[2] = java3;
         ProgrammingBook java4 = new ProgrammingBook(4, "hoclaptrinh4", 40000, "tu4", "C++", "SonMC4");
         programmingBooks[3] = java4;
-        ProgrammingBook java5 = new ProgrammingBook(5, "hoclaptrinh5", 50000, "tu5", "java", "SonMC5");
+        ProgrammingBook java5 = new ProgrammingBook(5, "hoclaptrinh5", 50000, "tu5", "Java", "SonMC5");
         programmingBooks[4] = java5;
 
 
@@ -38,12 +33,12 @@ public class Method {
     public void tinhtien() {
         float tongtienPRB = 0;
         float tongtienFTB = 0;
-        float tongtien = 0;
-        for (int i = 0; i < programmingBooks.length; i++) {
-            tongtienPRB += programmingBooks[i].price;
+        float tongtien;
+        for (ProgrammingBook programmingBook : programmingBooks) {
+            tongtienPRB += programmingBook.price;
         }
-        for (int i = 0; i < fictionBooks.length; i++) {
-            tongtienFTB += fictionBooks[i].price;
+        for (FictionBook fictionBook : fictionBooks) {
+            tongtienFTB += fictionBook.price;
         }
         tongtien = tongtienFTB + tongtienPRB;
         System.out.println("Tổng tiền là: " + tongtien + "VND");
@@ -52,9 +47,9 @@ public class Method {
 //    hàm đếm số sach java
     public int countBookJava() {
         ArrayList<ProgrammingBook> programmingBookArrayList = new ArrayList<>();
-        for (int i = 0; i < programmingBooks.length; i++) {
-            if (programmingBooks[i].getLanguage().equals("java")) {
-                programmingBookArrayList.add(programmingBooks[i]);
+        for (ProgrammingBook programmingBook : programmingBooks) {
+            if (programmingBook.getLanguage().toLowerCase().equals("java")) {
+                programmingBookArrayList.add(programmingBook);
             }
         }
         return programmingBookArrayList.size();

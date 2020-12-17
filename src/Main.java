@@ -29,12 +29,12 @@ public class Main {
                     int choose = Integer.parseInt(sc.nextLine());
                     switch (choose) {
                         case 1:
-                            System.out.println("Enter name of book: ");
+                            System.out.println("Nhập tên cuốn sách: ");
                             String name = sc.nextLine();
                             mt.searchPGB(name);
                             break;
                         case 2:
-                            System.out.println("Enter name of book: ");
+                            System.out.println("Nhập tên cuốn sách: ");
                             String name1 = sc.nextLine();
                             mt.searchFTB(name1);
                             break;
