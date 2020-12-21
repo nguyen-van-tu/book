@@ -1,7 +1,9 @@
-public class FictionBook extends Book {
-    public String category;
+public class FictionBook extends Book implements Discount {
+    private String category;
+    public double promotionalPrice;
 
-    public FictionBook(){
+    public FictionBook() {
+
 
     }
 
@@ -18,14 +20,13 @@ public class FictionBook extends Book {
         this.category = category;
     }
 
+
+
     @Override
-    public String toString() {
-        return "FictionBook{" +
-                "category='" + category + '\'' +
-                ", bookID=" + bookID +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", author='" + author + '\'' +
-                '}';
+    public double setDiscount(int persent) {
+        return promotionalPrice = getPrice() * (100 - persent) / 100;
+
     }
+
+
 }

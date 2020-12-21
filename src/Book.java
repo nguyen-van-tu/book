@@ -1,7 +1,7 @@
 public class Book {
     public int bookID;
     public String name;
-    public float price;
+    public double price;
     public String author;
 
     public Book(){
@@ -9,7 +9,6 @@ public class Book {
     }
 
     public Book(int book, String name, float price, String author) {
-        this.bookID = bookID;
         this.name = name;
         this.price = price;
         this.author = author;
@@ -32,7 +31,7 @@ public class Book {
     }
 
     public float getPrice() {
-        return price;
+        return (float) price;
     }
 
     public void setPrice(float price) {
