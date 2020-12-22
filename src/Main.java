@@ -18,7 +18,7 @@ public class Main {
                     mt.add();
                     break;
                 case 2:
-//                    mt.tinhtien();
+                    mt.tinhtien();
                     break;
                 case 3:
                     System.out.println("Số sách ngôn ngữ java là: " + mt.countBookJava());
@@ -44,7 +44,7 @@ public class Main {
                 case 5:
                     double total = 0;
                     for (FictionBook f: mt.fictionBooks) {
-                        total+= f.setDiscount(100);
+                        total+= f.setDiscount(10);
 
                     }
                     System.out.println("Gía còn lại :"+ total);
